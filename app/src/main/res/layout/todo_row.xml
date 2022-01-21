@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="todo"
+            type="com.example.todoappbatch_02.entities.TodoModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/todo_row_ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setPriorityIcon="@{todo.priority}"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="40dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/whatID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="What to do?"
+                    android:text="@{todo.name}"
+                    android:textSize="24sp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/dateID"
+                        android:layout_below="@+id/whatID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Date"
+                        android:text="@{todo.date}"
+                        android:textSize="20sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/timeID"
+                        android:layout_below="@+id/whatID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Time"
+                        android:layout_marginLeft="20dp"
+                        android:text="@{todo.time}"
+                        android:textSize="20sp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:checked="@{todo.completed}"
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

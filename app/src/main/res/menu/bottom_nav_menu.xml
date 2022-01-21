@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/pending_todos"
+
+        android:icon="@drawable/ic_baseline_pending_24"
+        android:id="@+id/allTodoListFragment"/>
+    <item android:title="@string/done"
+        android:icon="@drawable/ic_todo_list_done_all_24"
+        android:id="@+id/doneFragment"/>
+    <item android:title="@string/new_todo"
+        android:icon="@drawable/ic_todo_list_menu_24"
+        android:id="@+id/newTodoListFragment"/>
+
+
+</menu>
